@@ -1,0 +1,37 @@
+{
+	"name": "repro-zod-openapi-swagger-examples",
+	"module": "src/index.ts",
+	"type": "module",
+	"license": "MIT",
+	"engines": {
+		"node": "22.x"
+	},
+	"scripts": {
+		"update-deps": "bun npm-check-updates --root --format group -i",
+		"type-check": "tsc --noEmit",
+		"check": "biome check .",
+		"format": "biome format --write .",
+		"format-ci": "biome format .",
+		"lint": "biome lint .",
+		"lint-fix": "biome lint --write .",
+		"dev": "pnpm tsx --watch ./src/index.ts"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.2.3",
+		"@types/bun": "latest",
+		"npm-check-updates": "18.1.0",
+		"tsx": "^4.20.5"
+	},
+	"peerDependencies": {
+		"typescript": "5.9.2"
+	},
+	"dependencies": {
+		"@fastify/swagger": "9.5.1",
+		"@fastify/swagger-ui": "5.2.3",
+		"fastify": "5.6.0",
+		"fastify-zod-openapi": "5.3.2",
+		"zod": "4.1.5",
+		"zod-openapi": "5.4.0"
+	},
+	"packageManager": "pnpm@9.15.5+sha512.845196026aab1cc3f098a0474b64dfbab2afe7a1b4e91dd86895d8e4aa32a7a6d03049e2d0ad770bbe4de023a7122fb68c1a1d6e0d033c7076085f9d5d4800d4"
+}
